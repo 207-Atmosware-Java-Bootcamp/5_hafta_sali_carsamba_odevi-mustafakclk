@@ -1,0 +1,26 @@
+package faktoriyelodev;
+
+import java.util.Scanner;
+
+public class Faktoriyel {
+	
+	public static void main(String[] args) {
+			getData();
+	}
+	public static void getData() {
+		Scanner sc = new Scanner(System.in);
+		int number=0 ;
+		System.out.println("lütfen sayi giriniz:");
+		number=sc.nextInt();
+		sc.close();
+		faktoriyel(number);
+		
+	}
+	public static void faktoriyel(int number) {
+		long result= 1L;
+		for (int i = number; i > 0; i--) {
+			result=result*i;
+		}
+		System.out.println(result);
+	}
+}

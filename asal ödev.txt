@@ -1,0 +1,36 @@
+package asalodev;
+
+import java.util.Scanner;
+
+public class asal {
+	
+	public static void main(String[] args) {
+		getData();
+		
+	}
+	public static void getData() {
+		Scanner sc = new Scanner(System.in);
+		int number=0;
+		System.out.println("lütfen sayi giriniz:");
+		number=sc.nextInt();
+		primeControl(number);
+		
+	}
+		public static void primeControl(int number) {
+			
+			if(number<=1) {
+				System.out.println(number+" sayısı asal değildir");
+			}else if(number==2){
+			System.out.println(number+" sayısı asaldır.");
+			}else { 
+					for (int i = 2; i < number; i++) {
+						if(number%i ==0) {
+							System.out.println("Sayı asal değildir.");
+							break;
+						}else if((number-1)==i) {
+							System.out.println(number+" sayısı asaldır.");
+						}
+					}
+		}
+}
+}
